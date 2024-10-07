@@ -9,6 +9,31 @@
       Existen tres formas correctas de incluir código JavaScript en un documento HTML.
     
     -->
+
+    <!--
+
+      2. Segunda forma: Incluir el código JavaScript en el <head> con el atributo defer.
+
+      Al colocar el script en el <head> con 'defer', el navegador descarga el archivo JS en paralelo pero se asegura de que no lo ejecute hasta que todo el DOM esté completamente cargado.
+
+    -->
+
+    <script defer>
+      console.log("Este mensaje es desde el head!");
+    </script>
+    
+    <!--
+
+      Ventajas:
+
+        - El script se descarga en paralelo, mejorando el rendimiento.
+        - Evita errores al interactuar con el DOM ya que se ejecuta cuando todo el documento está cargado.
+
+      Desventajas:
+
+        - Aún es parte del archivo HTML, lo que puede no ser ideal para proyectos grandes.
+
+    -->
   </head>
   <body>
     <h1>🚀 Fundamentos de Javascript</h1>
@@ -19,32 +44,5 @@
       HTML y CSS. Se ejecuta en el navegador del cliente, lo que permite que las
       páginas web sean interactivas y dinámicas.
     </p>
-
-    <!-- 
-
-      1. Primera forma: Incluir el código directamente en el HTML antes del cierre de la etiqueta </body>.
-      
-      El código JavaScript se coloca dentro de las etiquetas <script> al final del cuerpo del documento.
-      
-      Esto garantiza que todo el HTML se haya cargado antes de que se ejecute el código JS.
-
-    -->
-
-    <script>
-      console.log("Mensaje desde etiqueta script antes del cierre del body");
-    </script>
-
-    <!--
-
-      Ventajas:
-
-      - El código interactúa con el DOM sin problemas, ya que el HTML está completamente cargado.
-      - Ideal para scripts pequeños y simples.
-
-      Desventajas:
-      
-      - No separa el código JS del HTML, lo que dificulta el mantenimiento en proyectos grandes.
-
-    -->
   </body>
 </html>

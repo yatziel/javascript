@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🚀 Fundamentos de Javascript</title>
+    <!--
+
+      Existen tres formas correctas de incluir código JavaScript en un documento HTML.
+    
+    -->
+  </head>
+  <body>
+    <h1>🚀 Fundamentos de Javascript</h1>
+    <p>
+      JavaScript es un lenguaje de programación de alto nivel, interpretado y
+      dinámico que se utiliza principalmente para el desarrollo web. Es uno de
+      los lenguajes esenciales del desarrollo de aplicaciones web, junto con
+      HTML y CSS. Se ejecuta en el navegador del cliente, lo que permite que las
+      páginas web sean interactivas y dinámicas.
+    </p>
+
+    <!-- 
+
+      1. Primera forma: Incluir el código directamente en el HTML antes del cierre de la etiqueta </body>.
+      
+      El código JavaScript se coloca dentro de las etiquetas <script> al final del cuerpo del documento.
+      
+      Esto garantiza que todo el HTML se haya cargado antes de que se ejecute el código JS.
+
+    -->
+
+    <script>
+      console.log("Mensaje desde etiqueta script antes del cierre del body");
+    </script>
+
+    <!--
+
+      Ventajas:
+
+      - El código interactúa con el DOM sin problemas, ya que el HTML está completamente cargado.
+      - Ideal para scripts pequeños y simples.
+
+      Desventajas:
+      
+      - No separa el código JS del HTML, lo que dificulta el mantenimiento en proyectos grandes.
+
+    -->
+  </body>
+</html>

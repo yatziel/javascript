@@ -12,26 +12,25 @@
 
     <!--
 
-      2. Segunda forma: Incluir el código JavaScript en el <head> con el atributo defer.
+      3. Tercera forma: Incluir un archivo externo con el atributo 'src' y 'defer'.
 
-      Al colocar el script en el <head> con 'defer', el navegador descarga el archivo JS en paralelo pero se asegura de que no lo ejecute hasta que todo el DOM esté completamente cargado.
-
+      Este método enlaza un archivo JS externo y usa 'defer' para cargar el archivo en paralelo, pero ejecutarlo solo después de que el DOM esté completamente cargado.
+    
     -->
-
-    <script defer>
-      console.log("Este mensaje es desde el head!");
-    </script>
+    
+    <script defer src="./holamundo.js"></script>
     
     <!--
 
       Ventajas:
 
-        - El script se descarga en paralelo, mejorando el rendimiento.
-        - Evita errores al interactuar con el DOM ya que se ejecuta cuando todo el documento está cargado.
+      - Separa el código JS del HTML, lo que mejora la organización y el mantenimiento del proyecto.
+      - El archivo JS puede ser reutilizado en diferentes páginas y se almacena en caché por el navegador.
+      - El atributo 'defer' asegura que el código JS se ejecute cuando el DOM esté listo.
 
       Desventajas:
 
-        - Aún es parte del archivo HTML, lo que puede no ser ideal para proyectos grandes.
+      - Ninguna significativa, esta es la forma más recomendada para proyectos grandes y modulares.
 
     -->
   </head>
